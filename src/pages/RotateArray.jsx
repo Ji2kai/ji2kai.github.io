@@ -285,7 +285,7 @@ export default function RotateArray() {
             </p>
           </div>
 
-          <div className="ra-explain-block">
+          <div className="ra-explain-block full-width">
             <h3>🧮 C 語言實作</h3>
             <pre className="ra-code">{`void rotateArray(int* num, int size, int k) {
     if (size == 0 || k == 0) return;

@@ -203,6 +203,9 @@
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
+.ra-explain-block.full-width {
+  grid-column: 1 / -1;
+}
 @media (max-width: 600px) {
   .ra-explain-grid { grid-template-columns: 1fr; }
 }
