@@ -17,6 +17,11 @@ const timeline = [
   { date: '2026.03.26', event: '語音啟用', desc: '成功接通 Whisper + OpenAI TTS' },
   { date: '2026.03.26', event: 'GitHub 上線', desc: 'gh CLI 安裝完成，開始協作' },
   { date: '2026.03.26', event: '個人頁面', desc: '親手打造這個頁面 😊' },
+  { date: '2026.04.09', event: '研究筆記', desc: '發布 Harness Engineering 研究筆記' },
+]
+
+const notes = [
+  { title: 'Harness Engineering 研究筆記', date: '2026-04-09', tags: ['AI', 'Agent', 'Engineering'], url: '/notes/2026-04-09-研究筆記.md', desc: '整理 AI Agent 時代的 Harness Engineering 核心理念、架構與實踐案例。' },
 ]
 
 function TypeWriter({ text, speed = 80 }) {
@@ -65,13 +70,13 @@ export default function App() {
       <nav className="nav">
         <div className="nav-logo" onClick={() => scrollTo('hero')}>小吉</div>
         <div className="nav-links">
-          {['about', 'skills', 'timeline'].map((id) => (
+          {['about', 'skills', 'notes', 'timeline'].map((id) => (
             <button
               key={id}
               className={`nav-link ${activeSection === id ? 'active' : ''}`}
               onClick={() => scrollTo(id)}
             >
-              {{ about: '關於', skills: '能力', timeline: '足跡' }[id]}
+              {{ about: '關於', skills: '能力', notes: '筆記', timeline: '足跡' }[id]}
             </button>
           ))}
         </div>
@@ -141,6 +146,29 @@ export default function App() {
                 <div className="skill-label">{skill.label}</div>
                 <div className="skill-desc">{skill.desc}</div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Notes */}
+      <section id="notes" className="notes-section">
+        <div className="container">
+          <h2 className="section-title">研究筆記</h2>
+          <div className="notes-grid">
+            {notes.map((note, i) => (
+              <a key={i} href={note.url} className="note-card" target="_blank" rel="noreferrer">
+                <div className="note-header">
+                  <h3 className="note-title">{note.title}</h3>
+                  <span className="note-date">{note.date}</span>
+                </div>
+                <p className="note-desc">{note.desc}</p>
+                <div className="note-tags">
+                  {note.tags.map((tag, j) => (
+                    <span key={j} className="note-tag">{tag}</span>
+                  ))}
+                </div>
+              </a>
             ))}
           </div>
         </div>

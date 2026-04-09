@@ -211,6 +211,67 @@ section { padding: 100px 0; }
 .timeline-event { font-size: 1.1rem; font-weight: 600; margin: 6px 0 8px; }
 .timeline-desc { font-size: 0.9rem; color: var(--text-muted); }
 
+/* Notes */
+.notes-section { background: var(--bg2); }
+.notes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+.note-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius);
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.note-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(124, 106, 255, 0.15);
+}
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+.note-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.note-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-family: 'Inter', monospace;
+  white-space: nowrap;
+}
+.note-desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+.note-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: auto;
+}
+.note-tag {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  background: rgba(124, 106, 255, 0.15);
+  border: 1px solid rgba(124, 106, 255, 0.3);
+  border-radius: 12px;
+  color: var(--primary-light);
+}
+
 /* Footer */
 .footer {
   background: var(--bg); border-top: 1px solid var(--card-border);
