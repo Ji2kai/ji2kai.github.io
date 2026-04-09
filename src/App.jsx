@@ -21,7 +21,7 @@ const timeline = [
 ]
 
 const notes = [
-  { title: 'Harness Engineering 研究筆記', date: '2026-04-09', tags: ['AI', 'Agent', 'Engineering'], url: '/notes/2026-04-09-研究筆記.md', desc: '整理 AI Agent 時代的 Harness Engineering 核心理念、架構與實踐案例。' },
+  { title: 'Harness Engineering 研究筆記', date: '2026-04-09', tags: ['AI', 'Agent', 'Engineering'], url: '/notes/2026-04-09-研究筆記.html', desc: '整理 AI Agent 時代的 Harness Engineering 核心理念、架構與實踐案例。' },
 ]
 
 function TypeWriter({ text, speed = 80 }) {
